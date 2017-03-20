@@ -5,4 +5,43 @@
  */
 function linkedListGenerator(){
 
+  var newList = {
+    value: "First Value",
+    next: null
+  };
+
+  function getHead() {
+    return newList.value;
+  }
+
+  function getTail() {
+
+  }
+
+  function add(Value) {
+
+  }
+
+  function get(Number) {
+
+  }
+
+  function remove(Number) {
+
+  }
+
+  function insert(Value, Number) {
+
+  }
+
+
+  return {
+    getHead,
+    getTail,
+    add,
+    get,
+    remove,
+    insert
+  };
+
 }
