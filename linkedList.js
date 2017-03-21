@@ -55,18 +55,43 @@ function linkedListGenerator(){
 
     if (removeNode === false) {
       return false;
-    } else if (removedNode === linkhead) {
+
+    } else if (num === 0) {
       linkHead = linkHead.next;
+
     } else if (removeNode === linkTail) {
       linkTail = previousNode;
       linkTail.next = null;
+
     } else {
       previousNode.next = removeNode.next;
     }
 
   }
 
-  function insert(Value, Number) {
+  function insert(Value, num) {
+    console.log(get(num));
+
+    if (num === 0) {
+      var newNode1 = {
+        value : Value,
+        next : linkHead
+      };
+      linkHead = newNode1;
+
+    } else if (get(num) === false || num < 0) {
+
+      return false;
+
+    } else {
+      var placeNode  = get(num - 1);
+      var newNode = {
+        value : Value,
+        next : placeNode.next
+      };
+
+      placeNode.next = newNode;
+    }
 
   }
 
