@@ -75,18 +75,14 @@ function linkedListGenerator(){
         next : linkHead
       };
       linkHead = newNode1;
-
     } else if (get(num) === false || num < 0) {
-
       return false;
-
     } else {
       var placeNode  = get(num - 1);
       var newNode = {
         value : Value,
         next : placeNode.next
       };
-
       placeNode.next = newNode;
     }
   }
