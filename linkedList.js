@@ -37,9 +37,9 @@ function linkedListGenerator(){
   }
 
 
-  function get(Number) {
+  function get(num) {
     var getNode = linkHead;
-    for (var i = 0; i < Number; i ++) {
+    for (var i = 0; i < num; i ++) {
       if (getNode.next === null) {
         return false;
       } else {
@@ -49,7 +49,20 @@ function linkedListGenerator(){
     return getNode;
   }
 
-  function remove(Number) {
+  function remove(num) {
+    var removeNode = get(num);
+    var previousNode = get(num - 1);
+
+    if (removeNode === false) {
+      return false;
+    } else if (removedNode === linkhead) {
+      linkHead = linkHead.next;
+    } else if (removeNode === linkTail) {
+      linkTail = previousNode;
+      linkTail.next = null;
+    } else {
+      previousNode.next = removeNode.next;
+    }
 
   }
 
