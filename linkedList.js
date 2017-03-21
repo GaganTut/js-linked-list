@@ -36,7 +36,6 @@ function linkedListGenerator(){
     return newNode;
   }
 
-
   function get(num) {
     var getNode = linkHead;
     for (var i = 0; i < num; i ++) {
@@ -66,11 +65,9 @@ function linkedListGenerator(){
     } else {
       previousNode.next = removeNode.next;
     }
-
   }
 
   function insert(Value, num) {
-    console.log(get(num));
 
     if (num === 0) {
       var newNode1 = {
@@ -92,9 +89,7 @@ function linkedListGenerator(){
 
       placeNode.next = newNode;
     }
-
   }
-
 
   return {
     getHead,
@@ -104,5 +99,4 @@ function linkedListGenerator(){
     remove,
     insert
   };
-
 }
